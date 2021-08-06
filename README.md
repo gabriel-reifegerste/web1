@@ -1,6 +1,8 @@
 # Web1
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
+## Before Running
+
+It is important to run npm install to install all dependencies
 
 ## Development server
 

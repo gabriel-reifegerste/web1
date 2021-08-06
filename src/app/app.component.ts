@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpService } from './http.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'web1';
+
+  constructor(private service: HttpService ) {
+    this.service.persistInitialDataOnLocal();
+  }
 }
