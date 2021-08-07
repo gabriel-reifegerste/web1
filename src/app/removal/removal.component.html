@@ -1,0 +1,8 @@
+<mat-card>
+    <h1>Remover registro</h1>
+    <mat-form-field appearance="fill">
+        <mat-label>Código pessoa</mat-label>
+        <input [formControl]="id" matInput>
+    </mat-form-field>
+    <button (click)="verifyAndRemove()" class="remover" mat-mini-fab color="primary"><mat-icon>delete</mat-icon></button>
+</mat-card>

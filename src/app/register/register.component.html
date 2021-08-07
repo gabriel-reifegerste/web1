@@ -1,0 +1,27 @@
+<mat-card>
+    <h1>Adicionar registro pessoa</h1>
+    <mat-form-field *ngIf="this.isUpdate" appearance="fill" floatLabel="always">
+        <mat-label>Id</mat-label>
+        <input [formControl]="id" matInput>
+    </mat-form-field>
+    <button *ngIf="this.isUpdate" (click)="getEmployeeById()" class="searchButton" mat-mini-fab color="secondary"><mat-icon>search</mat-icon></button>
+    <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>Nome</mat-label>
+        <input [disabled]="true" [formControl]="nome" matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>Idade</mat-label>
+        <input [formControl]="idade" matInput type="number" class="right-align" placeholder="0">
+    </mat-form-field>
+    <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>Salário mensal</mat-label>
+        <input [formControl]="salario" matInput type="number" class="right-align" placeholder="0">
+        <span matPrefix>$&nbsp;</span>
+        <span matSuffix>.00</span>
+    </mat-form-field>
+    <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>URL da foto</mat-label>
+        <input [formControl]="url" matInput>
+    </mat-form-field>
+    <button (click)="saveEmployee()" class="adicionar" mat-fab color="primary"><mat-icon>save</mat-icon></button>
+</mat-card>

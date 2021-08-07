@@ -1,0 +1,16 @@
+<nav class="toolbar" role="banner">
+    <img
+      width="100"
+      alt="Logo da furb"
+      src="https://www.furb.br/dion/resources/imagens/logo-furb.png"
+    />
+    <div *ngFor="let item of menuItems">
+      <div class="spacer"></div>
+        <button
+            aria-label="Inserir pessoa / cadastrar pessoa"
+            (click)="navigate(item)"
+        >
+        {{ item }}
+        </button>
+    </div>
+  </nav>
